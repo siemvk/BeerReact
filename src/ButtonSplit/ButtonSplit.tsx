@@ -31,7 +31,8 @@ export const SplitButton = ({
       <nav className="group split">
         <Button
           size={size}
-          forms={["left-round"]}
+          // advancedClasses={["left-round"]}
+          rounding="left-round"
           responsive={responsive}
           FAB={false}
           icon={icon}
@@ -46,7 +47,7 @@ export const SplitButton = ({
           {children}
         </Button>
         <div>
-          <Button icon="keyboard_arrow_down" forms={["right-round", "square"]} onClick={() => { setOpen(true) }} />
+          <Button icon="keyboard_arrow_down" shape="square" rounding="right-round" onClick={() => { setOpen(true) }} />
           {menu}
         </div>
       </nav >

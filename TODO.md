@@ -36,7 +36,7 @@ components:
 - [] Overlay
 - [] Page <-- niet???
 - [x] Progress
-- [x] Radio
+- [*] Radio
 - [x] Select
 - [] Shape
 - [x] Slider

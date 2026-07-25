@@ -6,7 +6,9 @@ export { Checkbox, type CheckboxProps } from "./formItems/checkbox/checkbox"
 export { Input, type InputProps } from "./formItems/input/input"
 export { Radio, type RadioProps } from "./formItems/radio/radio"
 export { Switch, type SwitchProps } from "./formItems/switch/switch"
+export { Select, type SelectProps } from "./formItems/select/select"
 export { Fieldset, type FieldsetProps } from "./formItems/fieldset/fieldset"
+export { Slider, type SliderProps } from "./formItems/slider/slider"
 
 // helpers
 export { Tooltip, type TooltipProps } from "./helpers/tooltip"

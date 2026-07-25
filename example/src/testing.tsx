@@ -10,7 +10,7 @@ export default function Testing() {
         {
             title: "Dialog test",
             detail: <>Druk op de knop voor een test dialog.<br /> de rode is voor errors btw.</>,
-            button: < Button icon="bolt" forms={["round"]} onClick={() => {
+            button: < Button icon="bolt" advancedClasses={["round"]} onClick={() => {
                 pushDialog({
                     title: "Het werkt :D",
                     content: "content hier",
@@ -23,7 +23,7 @@ export default function Testing() {
             title: "Toast test",
             detail: <>Toon een toast, teminsten ik denk dat het zo heet??? <br />Ook een test voor menus in de zelfde div als button</>,
             button: <div>
-                <Button icon="visibility" forms={["border", "round"]}>
+                <Button icon="visibility" advancedClasses={["border", "round"]}>
                     Toast test
                 </Button>
                 {menuHelper({

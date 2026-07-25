@@ -37,10 +37,10 @@ export const DialogProvider = ({ children }: { children: ReactNode }) => {
                 <h5>{dialog.title}</h5>
                 <p>{dialog.content}</p>
                 <nav className="right-align no-space">
-                    <Button data-ui="#dialog" forms={["transparent", "link"]} >
+                    <Button data-ui="#dialog" advancedClasses={["transparent", "link"]} >
                         Cancel
                     </Button>
-                    <Button data-ui="#dialog" forms={["transparent", "link"]} >
+                    <Button data-ui="#dialog" advancedClasses={["transparent", "link"]} >
                         Confirm
                     </Button>
                 </nav>

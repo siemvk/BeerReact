@@ -5,7 +5,8 @@ import { SplitButton } from "../ButtonSplit/ButtonSplit";
 
 export interface CardProps extends ButtonHTMLAttributes<HTMLDivElement> {
     title: string,
-    buttons?: React.ReactElement<ButtonProps, typeof Button>[]
+    buttons?: React.ReactElement<ButtonProps, typeof Button>[],
+
 }
 
 export const Card = ({
