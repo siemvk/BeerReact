@@ -2,7 +2,7 @@ import React from "react";
 import { size } from "../../types";
 
 
-export interface FieldsetProps extends React.HTMLAttributes<HTMLFieldSetElement> {
+export interface FieldsetProps extends Omit<React.InputHTMLAttributes<HTMLFieldSetElement>, "size"> {
     legend?: string
 }
 

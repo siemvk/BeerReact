@@ -18,7 +18,8 @@ its not recomended to use `advancedClasses` instead use`shape`, `rounding`, and 
 
   shape?: "circle" | "square",
   rounding?: "round" | "no-round" | "left-round" | "right-round" | "top-round" | "bottom-round",
-  variant?: "primary" | "transparent" | "link" | "chip"
+  variant?: "primary" | "transparent" | "link" | "chip",
+  ripple?: "ripple" | "slow-ripple" | "fast-ripple",
   active?: boolean
   responsive?: boolean,
   extendedFAB?: boolean,
@@ -36,6 +37,7 @@ export const Button = ({
   responsive,
   variant,
   extendedFAB,
+  ripple,
   active,
   buttonTooltip: buttonTooltip,
   ...props
@@ -54,7 +56,7 @@ export const Button = ({
   }
   if (FAB) {
     return (
-      <button className={`${size} extra ${formsString} ${extraArgs} ${shape} ${rounding} ${variant}`} {...props}>
+      <button className={`${size} extra ${ripple} ${formsString} ${extraArgs} ${shape} ${rounding} ${variant}`} {...props}>
         <i>
           {icon}
         </i>
@@ -66,7 +68,7 @@ export const Button = ({
     )
   } else {
     return (
-      <button className={`${size} ${formsString} ${extraArgs} ${shape} ${rounding} ${variant}`} {...props}>
+      <button className={`${size} ${formsString} ${ripple} ${extraArgs} ${shape} ${rounding} ${variant}`} {...props}>
         <TextAndIcon icon={icon}>{children}
           {buttonTooltip}
         </TextAndIcon>

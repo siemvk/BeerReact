@@ -2,7 +2,7 @@ import React from "react";
 import { size } from "../../types";
 
 
-export interface CheckboxProps extends React.HTMLAttributes<HTMLInputElement> {
+export interface CheckboxProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "size"> {
     size?: size
 }
 

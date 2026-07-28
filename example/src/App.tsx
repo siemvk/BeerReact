@@ -1,7 +1,7 @@
 import { ReactElement, useEffect, useMemo, useState } from "react";
 import Testing from "./testing";
 import AutoNavRail from "../../src/helpers/smartNavRail";
-import { Nav, navItem } from "../../src";
+import { Input, Nav, navItem } from "../../src";
 import ButtonBuilder from "./ButtonBuilder";
 
 const pages: ({ p: () => React.JSX.Element, i: string })[] = [

@@ -2,7 +2,7 @@ import React from "react";
 import { size } from "../../types";
 
 
-export interface RadioProps extends React.HTMLAttributes<HTMLInputElement> {
+export interface RadioProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "size"> {
     size?: size,
     name?: string,
     value?: string,

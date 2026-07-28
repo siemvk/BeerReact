@@ -3,7 +3,7 @@ import { size } from "../../types";
 import TextAndIcon from "../../helpers/textAndIcon";
 
 
-export interface SwitchProps extends React.HTMLAttributes<HTMLInputElement> {
+export interface SwitchProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "size"> {
     icon?: string
 }
 

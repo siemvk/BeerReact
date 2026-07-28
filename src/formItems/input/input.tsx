@@ -2,7 +2,7 @@ import React from "react";
 import { size } from "../../types";
 
 
-export interface InputProps extends React.HTMLAttributes<HTMLInputElement> {
+export interface InputProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "size"> {
     size?: size,
     output?: string,
     label?: string,
@@ -44,7 +44,7 @@ export const Input = ({
             ${iconSuffix ? "suffix" : ""}`}
     >
         {iconPrefix && <i>{iconPrefix}</i>}
-        <input type="text" />
+        <input type="text" {...props} />
         {label && <label>{label}</label>}
         {output && <output className={invalid ? "invalid" : ""}>{output}</output>}
         {iconSuffix && <i>{iconSuffix}</i>}

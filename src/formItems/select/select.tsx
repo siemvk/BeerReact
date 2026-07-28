@@ -2,7 +2,7 @@ import React from "react";
 import { size } from "../../types";
 
 
-export interface SelectProps extends React.HTMLAttributes<HTMLSelectElement> {
+export interface SelectProps extends Omit<React.InputHTMLAttributes<HTMLSelectElement>, "size"> {
     size?: size,
     output?: string,
     label?: string,

@@ -3,7 +3,7 @@ import { size } from "../../types";
 import { Tooltip, TooltipProps } from "../../index";
 
 
-export interface SliderProps extends React.HTMLAttributes<HTMLInputElement> {
+export interface SliderProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "size"> {
     size?: size,
     slider2?: React.JSX.Element,
     vertical?: boolean,
