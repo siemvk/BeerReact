@@ -15,8 +15,6 @@ export interface NavTabsProps extends HTMLAttributes<HTMLElement> {
     hideOnMobile?: boolean
 }
 
-export type NavProps = NavTabsProps;
-
 export const NavTabs = ({
     children,
     selectedId,
