@@ -1,10 +1,10 @@
 import React, { ButtonHTMLAttributes, useState } from "react";
 import { size } from "../types";
-import { Button } from "../Button/Button";
+import { Button, ButtonProps } from "../Button/Button";
 import menuHelper from "../helpers/menu";
 import Tooltip, { TooltipProps } from "../helpers/tooltip";
 
-export interface SplitButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+export interface SplitButtonProps extends ButtonProps {
   icon?: string,
   size?: size,
   responsive?: boolean,
