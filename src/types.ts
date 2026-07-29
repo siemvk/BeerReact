@@ -19,3 +19,13 @@ export const sb_pos: InputType = {
     ],
     description: 'waar'
 }
+
+export type space = "no-space" | "small-space" | "medium-space" | "large-space" | undefined
+
+export const sb_space: InputType = {
+    control: "select",
+    options: [
+        "no-space", "small-space", "medium-space", "large-space", undefined
+    ],
+    description: "The spacing between stuff",
+}

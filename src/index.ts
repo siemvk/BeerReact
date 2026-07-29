@@ -29,3 +29,4 @@ export { SplitButton, type SplitButtonProps as SplitButtonProps } from "./Button
 export { Card, type CardProps } from "./card/card"
 export { Nav, type NavProps, type navItem } from "./Nav/Nav"
 export { Progress, type ProgressProps } from "./Progress/Progress"
+export { List, type ListProps } from "./List/List"
