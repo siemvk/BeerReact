@@ -8,7 +8,7 @@ export interface FlexProps extends React.HTMLAttributes<HTMLElement> {
 }
 
 
-export const Space = ({
+export const Flex = ({
     align = "left-align",
     className,
     ...props
@@ -18,4 +18,4 @@ export const Space = ({
     </nav>
 };
 
-export default Space;
+export default Flex;

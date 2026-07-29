@@ -27,8 +27,15 @@ export { ToastProvider, ToastContext, useToast } from "./providers/toast"
 export { Button, type ButtonProps } from "./Button/Button";
 export { SplitButton, type SplitButtonProps as SplitButtonProps } from "./ButtonSplit/ButtonSplit";
 export { Card, type CardProps } from "./card/card"
-export { NavRail, NavRail as Nav, type NavRailProps, type NavProps, type navItem } from "./Navs/NavRail/NavRail"
-export { NavTabs, type NavTabsProps } from "./Navs/NavTabs/NavTabs"
-export { NavBar, type NavBarProps } from "./Navs/NavBar/NavBar"
+export { IconCard, type IconCardProps } from "./IconCard/IconCard"
 export { Progress, type ProgressProps } from "./Progress/Progress"
 export { List, type ListProps } from "./List/List"
+
+// Navs
+export { NavTabs, type NavTabsProps } from "./Navs/NavTabs/NavTabs"
+export { NavBar, type NavBarProps } from "./Navs/NavBar/NavBar"
+export { NavRail, NavRail as Nav, type NavRailProps, type NavProps, type navItem } from "./Navs/NavRail/NavRail"
+export { Flex, type FlexProps } from "./Navs/Flex/Flex"
+
+// types
+export type { size, pos, space, align, padding } from "./types"
