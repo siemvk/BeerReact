@@ -37,6 +37,7 @@ export const Default: Story = {
     args: {
         initialSelected: "home",
         autoUpdateSelected: true,
+
         items: [
             {
                 id: "home",
@@ -59,5 +60,7 @@ export const Default: Story = {
                 text: "Profiel",
             },
         ],
+
+        hideOnMobile: false
     },
 };

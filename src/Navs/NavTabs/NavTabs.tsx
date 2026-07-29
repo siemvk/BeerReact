@@ -24,7 +24,7 @@ export const NavTabs = ({
     autoUpdateSelected = true,
     items = [],
     className = "",
-    hideOnMobile = true,
+    hideOnMobile = false,
     ...props
 }: NavTabsProps) => {
     const [internalSelected, setInternalSelected] = useState<string>(
@@ -34,7 +34,7 @@ export const NavTabs = ({
     const activeId = selectedId !== undefined ? selectedId : internalSelected;
 
     return (
-        <nav className={`tabbed scroll ${hideOnMobile ? "m l" : ""} ${className}`.trim()} {...props}>
+        <nav className={`tabbed no-scroll ${hideOnMobile ? "m l" : ""} ${className}`.trim()} {...props}>
             {items.map((v) => {
                 const isActive = activeId === v.id;
                 return (
