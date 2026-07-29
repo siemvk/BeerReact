@@ -31,12 +31,23 @@ export const sb_space: InputType = {
 }
 
 
-export type align = "left-align" | "center-align" | "right-align" | "middle-align"
+export type align = "left-align" | "center-align" | "right-align" | "middle-align" | "top-align" | "bottom-align"
 
 export const sb_align: InputType = {
     control: "select",
     options: [
-        "left-align", "center-align", "right-align", undefined
+        "left-align", "center-align", "right-align", "top-align", "bottom-align", undefined
     ],
     description: "How do we align stuff?",
 }
+
+export type padding = "padding" | "no-padding" | "tiny-padding" | "small-padding" | "medium-padding" | "large-padding"
+
+export const sb_padding: InputType = {
+    control: "select",
+    options: [
+        "padding", "no-padding", "tiny-padding", "small-padding", "medium-padding", "large-padding", undefined
+    ],
+    description: "The padding size",
+}
+
