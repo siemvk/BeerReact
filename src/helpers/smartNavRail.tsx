@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { Nav, NavProps } from "../Nav/Nav";
+import { NavRail, NavProps } from "../Navs/NavRail/NavRail";
 
 
 export interface AutoNavRailProps extends React.HTMLAttributes<HTMLElement> {
@@ -16,9 +16,9 @@ export const AutoNavRail = ({
         setIsLeftOrOther(navConfig.pos !== "right")
     }, [navConfig])
     return <>
-        {isLeftOrOther && <Nav {...navConfig}></Nav>}
+        {isLeftOrOther && <NavRail {...navConfig}></NavRail>}
         {children}
-        {!isLeftOrOther && <Nav {...navConfig}></Nav>}
+        {!isLeftOrOther && <NavRail {...navConfig}></NavRail>}
 
 
     </>
