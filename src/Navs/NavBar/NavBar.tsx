@@ -8,36 +8,28 @@ export type navItem = {
     id: string;
 };
 
-export interface NavRailProps extends HTMLAttributes<HTMLElement> {
-    InitialMenuOpen?: boolean;
-    pos?: "left" | "right";
-    allowSizeChange?: boolean;
+export interface NavBarProps extends HTMLAttributes<HTMLElement> {
+    pos?: "bottom" | "top";
     selectedId?: string;
     bigButton?: navItem;
     items: navItem[];
     initialSelected?: string;
     autoUpdateSelected?: boolean;
-    dontHideOnMobile?: boolean;
+    dontHideOnBigScreen?: boolean;
 }
 
-export interface NavProps extends NavRailProps { }
-
-export const NavRail = ({
+export const NavBar = ({
     children,
-    InitialMenuOpen = true,
-    pos = "left",
-    allowSizeChange = true,
+    pos = "bottom",
     bigButton,
     selectedId,
     initialSelected,
     autoUpdateSelected = true,
-    dontHideOnMobile = false,
+    dontHideOnBigScreen: dontHideOnBottomBigScreen,
     items = [],
     className = "",
     ...props
-}: NavRailProps) => {
-    const [menuOpen, setMenuOpen] = useState(InitialMenuOpen);
-
+}: NavBarProps) => {
     const [internalSelected, setInternalSelected] = useState<string>(
         initialSelected || (items.length > 0 ? items[0].id : "")
     );
@@ -54,34 +46,25 @@ export const NavRail = ({
     };
 
     const navClasses = [
-        !dontHideOnMobile ? "m l" : "",
+        !dontHideOnBottomBigScreen ? "s" : "",
         pos,
         "scroll",
-        menuOpen ? "max" : "",
+        // "max",
         className
     ].filter(Boolean).join(" ");
 
     return (
         <nav className={navClasses} {...props}>
-            <header>
-                {allowSizeChange && (
-                    <button
-                        className="extra circle transparent"
-                        onClick={() => setMenuOpen(!menuOpen)}
-                    >
-                        <i>{menuOpen ? "menu_open" : "menu"}</i>
-                    </button>
-                )}
-                {bigButton && (
-                    <button
-                        className="extend square round"
-                        onClick={() => handleItemClick(bigButton)}
-                    >
-                        <i>{bigButton.icon}</i>
-                        <span>{bigButton.text}</span>
-                    </button>
-                )}
-            </header>
+
+            {bigButton && (
+                <button
+                    className="extend square round"
+                    onClick={() => handleItemClick(bigButton)}
+                >
+                    <i>{bigButton.icon}</i>
+                    <span>{bigButton.text}</span>
+                </button>
+            )}
 
             {items.map((v) => {
                 const isActive = activeId === v.id;
@@ -100,4 +83,4 @@ export const NavRail = ({
     );
 };
 
-export default NavRail;
+export default NavBar;

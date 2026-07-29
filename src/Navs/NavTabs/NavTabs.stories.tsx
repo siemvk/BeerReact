@@ -22,10 +22,6 @@ const meta: Meta<typeof NavTabs> = {
         items: {
             description: "Array of tab items with id, icon, and text",
         },
-        hideOnMobile: {
-            control: "boolean",
-            description: "Do we hide on mobile"
-        }
     },
 };
 
@@ -37,7 +33,6 @@ export const Default: Story = {
     args: {
         initialSelected: "home",
         autoUpdateSelected: true,
-
         items: [
             {
                 id: "home",
@@ -60,7 +55,5 @@ export const Default: Story = {
                 text: "Profiel",
             },
         ],
-
-        hideOnMobile: false
     },
 };

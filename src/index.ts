@@ -29,5 +29,6 @@ export { SplitButton, type SplitButtonProps as SplitButtonProps } from "./Button
 export { Card, type CardProps } from "./card/card"
 export { NavRail, NavRail as Nav, type NavRailProps, type NavProps, type navItem } from "./Navs/NavRail/NavRail"
 export { NavTabs, type NavTabsProps } from "./Navs/NavTabs/NavTabs"
+export { NavBar, type NavBarProps } from "./Navs/NavBar/NavBar"
 export { Progress, type ProgressProps } from "./Progress/Progress"
 export { List, type ListProps } from "./List/List"

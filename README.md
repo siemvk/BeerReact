@@ -7,3 +7,7 @@ Initialy I wanted to make my own material design framework, but I am lazy and ba
 ## Demo
 
 Run `bun run demo` to start the React example app in `./example/` and preview the components locally.
+
+## Ai disclaimer
+
+I used Ai for autocompletion and making the storybook configs.

@@ -26,22 +26,22 @@ export const Default: Story = {
         border: true,
         children: (
             <>
-                <li>Item 1</li>
-                <li>Item 2</li>
-                <li>Item 3</li>
-            </>
-        ),
-    },
-};
-
-export const WithoutBorder: Story = {
-    args: {
-        border: false,
-        children: (
-            <>
-                <li>First item without border</li>
-                <li>Second item without border</li>
-                <li>Third item without border</li>
+                <li>
+                    <i className="icon">folder</i>
+                    <div className="max">
+                        <h6 className="small">Documenten</h6>
+                        <div>32 bestanden</div>
+                    </div>
+                    <Button shape="circle" variant="transparent" icon="more_vert" />
+                </li>
+                <li>
+                    <i className="icon">image</i>
+                    <div className="max">
+                        <h6 className="small">Afbeeldingen</h6>
+                        <div>14 bestanden</div>
+                    </div>
+                    <Button shape="circle" variant="transparent" icon="delete" />
+                </li>
             </>
         ),
     },
