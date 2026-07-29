@@ -20,7 +20,7 @@ export const sb_pos: InputType = {
     description: 'waar'
 }
 
-export type space = "no-space" | "small-space" | "medium-space" | "large-space" | undefined
+export type space = "no-space" | "small-space" | "medium-space" | "large-space" | "space"
 
 export const sb_space: InputType = {
     control: "select",
@@ -31,7 +31,7 @@ export const sb_space: InputType = {
 }
 
 
-export type align = "left-align" | "center-align" | "right-align"
+export type align = "left-align" | "center-align" | "right-align" | "middle-align"
 
 export const sb_align: InputType = {
     control: "select",
