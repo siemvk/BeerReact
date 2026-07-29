@@ -29,3 +29,14 @@ export const sb_space: InputType = {
     ],
     description: "The spacing between stuff",
 }
+
+
+export type align = "left-align" | "center-align" | "right-align"
+
+export const sb_align: InputType = {
+    control: "select",
+    options: [
+        "left-align", "center-align", "right-align", undefined
+    ],
+    description: "How do we align stuff?",
+}

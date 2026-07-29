@@ -1,8 +1,9 @@
 import React from "react";
+import { align } from "../../types";
 
 
 export interface FlexProps extends React.HTMLAttributes<HTMLElement> {
-    align?: "left-align" | "center-align" | "right-align",
+    align?: align,
     // className?: string
 }
 
