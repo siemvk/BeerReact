@@ -26,21 +26,10 @@ export const Default: Story = {
         border: true,
         children: (
             <>
-                <li>
-                    <i className="icon">folder</i>
-                    <div className="max">
-                        <h6 className="small">Documenten</h6>
-                        <div>32 bestanden</div>
-                    </div>
-                    <Button shape="circle" variant="transparent" icon="more_vert" />
+                <li><p>test</p>
                 </li>
                 <li>
-                    <i className="icon">image</i>
-                    <div className="max">
-                        <h6 className="small">Afbeeldingen</h6>
-                        <div>14 bestanden</div>
-                    </div>
-                    <Button shape="circle" variant="transparent" icon="delete" />
+                    <p>hai</p>
                 </li>
             </>
         ),

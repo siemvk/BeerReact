@@ -1,30 +1,21 @@
 Nee dit is geen ai, ik heb gwn geen zin om gh issues te maken.
 
--[] Cards verbeteren (foto's enzo)
--[] diverse grotes van dingen
--[] Dialogs verbeteren
-
 components:
 - [] Badge
-- [] Button
-- - [x] base 
-- - [] FAB
-- - - [x] FAB
-- - - [x] extended FAB
-- - - [] FAB menu
+- [x] Button
 - [x] Card
 - [x] Checkbox
 - [x] Chip (via button)
 - [] Container
 - [x] Dialog
 - [x] Divider
-- [] Expansion
+- [x] Expansion (niet nodig, geen extra styling dan de default html details/summary)
 - [x] Fieldsets
 - [] Grid <-- hoe????
 - [x] Icon
-- [] Input
+- [x] Input
 - [] Layout
-- [] List
+- [x] List
 - [] Main layout
 - [] Media
 - [x] Menu
@@ -34,14 +25,13 @@ components:
 - - [x] navigation rail
 - - [x] navigation tabs
 - [] Overlay
-- [] Page <-- niet???
 - [x] Progress
-- [*] Radio
+- [x] Radio
 - [x] Select
 - [] Shape
 - [x] Slider
 - [x] Snackbar (als toast)
-- [] Summary
+- [] Steppers
 - [x] Switch
 - [] Table
 - [] Tabs

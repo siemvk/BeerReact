@@ -70,5 +70,6 @@ export const Default: Story = {
         initialSelected: "home",
         autoUpdateSelected: true,
         items: sampleItems,
+        dontHideOnBigScreen: true
     },
 };
