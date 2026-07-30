@@ -1,3 +1,4 @@
+import React from "react";
 import "beercss";
 import "material-dynamic-colors";
 
@@ -23,7 +24,6 @@ export { DialogContext, DialogProvider, useDialog } from "./providers/dialog"
 export { ToastProvider, ToastContext, useToast } from "./providers/toast"
 
 // others
-
 export { Button, type ButtonProps } from "./Button/Button";
 export { SplitButton, type SplitButtonProps as SplitButtonProps } from "./ButtonSplit/ButtonSplit";
 export { Card, type CardProps } from "./card/card"
@@ -39,3 +39,12 @@ export { Flex, type FlexProps } from "./Navs/Flex/Flex"
 
 // types
 export type { size, pos, space, align, padding } from "./types"
+
+// classnames
+export { classNames } from "./classNames"
+
+// html elements
+export const Code = (props: React.ComponentPropsWithoutRef<"code">) => React.createElement("code", props);
+export const Blockquote = (props: React.ComponentPropsWithoutRef<"blockquote">) => React.createElement("blockquote", props);
+
+

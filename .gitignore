@@ -37,3 +37,6 @@ report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
 storybook-static
 chromatic.log
 publish.sh
+demo-dist
+# Local Netlify folder
+.netlify

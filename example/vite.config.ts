@@ -9,6 +9,10 @@ const workspaceRoot = path.resolve(dirname, "..");
 export default defineConfig({
     root: dirname,
     plugins: [react()],
+    build: {
+        outDir: path.resolve(workspaceRoot, "demo-dist"),
+        emptyOutDir: true,
+    },
     server: {
         fs: {
             allow: [workspaceRoot],

@@ -21,9 +21,11 @@
     "dist"
   ],
   "scripts": {
-    "build": "vite build --config vite.config.ts && npm run build:types",
-    "build:lib": "vite build --config vite.config.ts && npm run build:types",
+    "build": "vite build --config vite.config.ts && bun run build:types",
+    "build:lib": "vite build --config vite.config.ts && bun run build:types",
     "build:types": "tsc -p tsconfig.build.json --emitDeclarationOnly",
+    "build:demo": "vite build --config example/vite.config.ts",
+    "deploy:demo": "bun run build:demo && bunx netlify deploy --dir=demo-dist --prod",
     "demo": "vite --config example/vite.config.ts",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
@@ -33,18 +35,24 @@
     "react-dom": "^18.0.0 || ^19.0.0"
   },
   "devDependencies": {
-    "storybook": "^10.4.6",
-    "@storybook/react-vite": "^10.4.6",
     "@chromatic-com/storybook": "^5.2.1",
-    "@storybook/addon-vitest": "^10.4.6",
     "@storybook/addon-a11y": "^10.4.6",
     "@storybook/addon-docs": "^10.4.6",
     "@storybook/addon-onboarding": "^10.4.6",
-    "typescript": "^5.9.2",
-    "vitest": "^4.1.9",
-    "playwright": "^1.61.1",
+    "@storybook/addon-vitest": "^10.4.6",
+    "@storybook/react-vite": "^10.4.6",
+    "@types/node": "^26.1.2",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.5",
     "@vitest/browser-playwright": "^4.1.9",
-    "@vitest/coverage-v8": "^4.1.9"
+    "@vitest/coverage-v8": "^4.1.9",
+    "netlify-cli": "^27.0.1",
+    "playwright": "^1.61.1",
+    "react-router-dom": "^7.18.2",
+    "storybook": "^10.4.6",
+    "typescript": "^5.9.2",
+    "vitest": "^4.1.9"
   },
   "dependencies": {
     "beercss": "^4.0.22",

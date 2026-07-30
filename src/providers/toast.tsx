@@ -1,4 +1,5 @@
 import { createContext, useContext, type ReactNode, useState } from "react";
+import { classNames } from ".."
 
 import React from 'react';
 import TextAndIcon from "../helpers/textAndIcon";
@@ -33,6 +34,12 @@ export const ToastProvider = ({ children }: { children: ReactNode }) => {
         setToast(toast)
         ui("#toastIam")
     };
+
+    classNames.rounding.round
+    classNames.border.border
+    classNames.text.size.large
+    classNames.text.bold
+
     return (
         <ToastContext.Provider value={{ addToast }}>
             {children}
