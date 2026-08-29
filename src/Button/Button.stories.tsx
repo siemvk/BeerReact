@@ -26,11 +26,6 @@ const meta: Meta = {
             control: "boolean",
             description: "Moet dit responsive zijn"
         },
-        forms: {
-            control: "multi-select",
-            description: "de form van de knop",
-            options: ["border", "circle", "square", "round", "no-round", "left-round", "right-round", "top-round", "bottom-round", "responsive", "extend", "chip", "vertical", "active"]
-        },
         extendedFAB: {
             control: "boolean",
             description: "Is it a extending FAB"
@@ -63,6 +58,8 @@ export const FAB: Story = {
         size: "",
         forms: ["square"],
         FAB: true,
-        icon: "home"
+        icon: "home",
+        shape: "square",
+        extendedFAB: false
     }
 };

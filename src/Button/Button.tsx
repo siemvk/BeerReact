@@ -7,15 +7,6 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   icon?: string,
   size?: size,
   FAB?: boolean,
-  /**
-@deprecated 
-its not recomended to use `advancedClasses` instead use`shape`, `rounding`, and `variant` as this makes cleaner code.
-
-`advancedClasses={["right-round", "square"]}` -> `shape="square" rounding="right-round"`
-@deprecatedSince 1.0.0
- */
-  advancedClasses?: ("border" | "circle" | "square" | "round" | "no-round" | "left-round" | "right-round" | "top-round" | "bottom-round" | "responsive" | "extend" | "transparent" | "link" | "chip" | "active")[],
-
   shape?: "circle" | "square",
   rounding?: rounding,
   variant?: "primary" | "transparent" | "link" | "chip",
@@ -32,7 +23,6 @@ export const Button = ({
   icon,
   size,
   FAB,
-  advancedClasses: forms,
   shape,
   rounding,
   responsive,
@@ -46,7 +36,6 @@ export const Button = ({
 }: ButtonProps) => {
   let extraArgs = ""
   let formsString = ""
-  forms?.forEach((form) => { formsString = formsString + " " + form })
   if (responsive) {
     extraArgs = extraArgs + " responsive "
   }
