@@ -6,7 +6,6 @@ components:
 - [x] Card
 - [x] Checkbox
 - [x] Chip (via button)
-- [] Container
 - [x] Dialog
 - [x] Divider
 - [x] Expansion (niet nodig, geen extra styling dan de default html details/summary)
@@ -32,9 +31,9 @@ components:
 - [x] Snackbar (als toast)
 - [] Steppers
 - [x] Switch
-- [] Table
+- [-] Table (imo niet nodig, kan via classnames)
 - [x] Tabs
-- [] Textarea
+- [-] Textarea (is gwn niet mooi)
 - [x] Tooltip
 
 overige todo's voor 3.0.0:

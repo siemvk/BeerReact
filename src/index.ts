@@ -36,6 +36,7 @@ export { NavTabs, type NavTabsProps } from "./Navs/NavTabs/NavTabs"
 export { NavBar, type NavBarProps } from "./Navs/NavBar/NavBar"
 export { NavRail, NavRail as Nav, type NavRailProps, type NavProps, type navItem } from "./Navs/NavRail/NavRail"
 export { Flex, type FlexProps } from "./Navs/Flex/Flex"
+export { Steppers, type SteppersProps } from "./Navs/steppers/Steppers"
 
 // types
 export type { size, pos, space, align, padding } from "./types"
