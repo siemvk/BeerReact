@@ -82,5 +82,7 @@ export const Bordered: Story = {
                 <p>Deze kaart heeft een duidelijke rand met behulp van de `border` klasse.</p>
             </>
         ),
+
+        className: "border"
     },
 };

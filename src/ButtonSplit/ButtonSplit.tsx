@@ -4,7 +4,7 @@ import { Button, ButtonProps } from "../Button/Button";
 import menuHelper from "../helpers/menu";
 import Tooltip, { TooltipProps } from "../helpers/tooltip";
 
-export interface SplitButtonProps extends ButtonProps {
+export interface SplitButtonProps extends Omit<ButtonProps, "roundig"> {
   icon?: string,
   size?: size,
   responsive?: boolean,

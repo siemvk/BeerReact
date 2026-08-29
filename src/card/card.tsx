@@ -1,14 +1,14 @@
 import React, { ButtonHTMLAttributes, ReactNode, useState } from "react";
-import { align, padding, size } from "../types";
+import { align, padding, rounding, size } from "../types";
 import { Button, ButtonProps } from "../Button/Button";
 import { SplitButton } from "../ButtonSplit/ButtonSplit";
 
 export interface CardProps extends ButtonHTMLAttributes<HTMLDivElement> {
     align?: align,
-    rounding?: "round" | "no-round" | "left-round" | "right-round" | "top-round" | "bottom-round",
+    rounding?: rounding,
     padding?: padding,
-    color?: "fill" | "primary-container" | "secondary-container" | "tertiary-container",
-    size?: size
+    color?: "fill" | "primary-container" | "secondary-container" | "tertiary-container" | "default",
+    size?: size,
 }
 
 export const Card = ({

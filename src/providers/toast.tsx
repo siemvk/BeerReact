@@ -35,11 +35,6 @@ export const ToastProvider = ({ children }: { children: ReactNode }) => {
         ui("#toastIam")
     };
 
-    classNames.rounding.round
-    classNames.border.border
-    classNames.text.size.large
-    classNames.text.bold
-
     return (
         <ToastContext.Provider value={{ addToast }}>
             {children}

@@ -51,3 +51,4 @@ export const sb_padding: InputType = {
     description: "The padding size",
 }
 
+export type rounding = "round" | "no-round" | "left-round" | "right-round" | "top-round" | "bottom-round"

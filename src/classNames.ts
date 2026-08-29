@@ -52,5 +52,11 @@ export const classNames = {
         right: "right-round",
         top: "top-round",
         bottom: "bottom-round"
+    },
+    colors: {
+        fill: "fill",
+        primary: "primary",
+        secondary: "secondary",
+        tertiary: "tertiary"
     }
 }

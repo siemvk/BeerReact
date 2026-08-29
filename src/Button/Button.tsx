@@ -1,5 +1,5 @@
 import React, { ButtonHTMLAttributes } from "react";
-import { size } from "../types";
+import { rounding, size } from "../types";
 import TextAndIcon from "../helpers/textAndIcon";
 import Tooltip, { TooltipProps } from "../helpers/tooltip";
 
@@ -17,11 +17,12 @@ its not recomended to use `advancedClasses` instead use`shape`, `rounding`, and 
   advancedClasses?: ("border" | "circle" | "square" | "round" | "no-round" | "left-round" | "right-round" | "top-round" | "bottom-round" | "responsive" | "extend" | "transparent" | "link" | "chip" | "active")[],
 
   shape?: "circle" | "square",
-  rounding?: "round" | "no-round" | "left-round" | "right-round" | "top-round" | "bottom-round",
+  rounding?: rounding,
   variant?: "primary" | "transparent" | "link" | "chip",
   ripple?: "ripple" | "slow-ripple" | "fast-ripple",
   active?: boolean
   responsive?: boolean,
+  vertical?: boolean,
   extendedFAB?: boolean,
   buttonTooltip?: React.ReactElement<TooltipProps, typeof Tooltip>;
 }
@@ -39,6 +40,7 @@ export const Button = ({
   extendedFAB,
   ripple,
   active,
+  vertical = false,
   buttonTooltip: buttonTooltip,
   ...props
 }: ButtonProps) => {
@@ -54,6 +56,10 @@ export const Button = ({
   if (extendedFAB) {
     extraArgs = extraArgs + " extend "
   }
+  if (vertical) {
+    extraArgs = extraArgs + " vertical "
+  }
+
   if (FAB) {
     return (
       <button className={`${size} extra ${ripple} ${formsString} ${extraArgs} ${shape} ${rounding} ${variant}`} {...props}>
