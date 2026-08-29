@@ -29,7 +29,7 @@ export default function App() {
 
 ## Components
 
-For a up to date list of components, check the [online storybook](https://6a42b161d347720a4abd308a-lkojdhxuiu.chromatic.com/).
+For a up to date list of components, check see the [chromatic library](https://www.chromatic.com/library?appId=6a42b161d347720a4abd308a) or the [storybook](https://www.chromatic.com/library?appId=6a42b161d347720a4abd308a).
 Do note that some components do not have a storybook as they are more helpful as a utility component, such as `Space` (empty div used for spacing) and `TextAndIcon` (used by buttons and other components for displaying text and icons when its uncertain if any wil be provided).
 
 ## Feedback and help

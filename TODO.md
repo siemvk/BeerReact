@@ -33,7 +33,7 @@ components:
 - [] Steppers
 - [x] Switch
 - [] Table
-- [] Tabs
+- [x] Tabs
 - [] Textarea
 - [x] Tooltip
 
