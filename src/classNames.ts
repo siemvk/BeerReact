@@ -58,5 +58,10 @@ export const classNames = {
         primary: "primary",
         secondary: "secondary",
         tertiary: "tertiary"
+    },
+    responsive: {
+        mobile: "s",
+        desktop: "l",
+        tablet: "m"
     }
 }

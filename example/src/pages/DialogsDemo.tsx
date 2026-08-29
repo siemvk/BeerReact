@@ -2,7 +2,7 @@ import { Button, Card, Space, useDialog, useToast } from "../../../src";
 
 export default function DialogsDemo() {
     const { addToast } = useToast();
-    const { pushDialog } = useDialog();
+    const { pushDialog, closeDialog } = useDialog();
 
     const showBasicToast = () => {
         addToast({
@@ -46,9 +46,9 @@ export default function DialogsDemo() {
             content: (
                 <div className="padding">
                     <h5>Simple Dialog</h5>
-                    <p>This is a standard modal dialog triggered using the <code>useDialog</code> hook.</p>
+                    <p>This is a standard modal dialog triggered using the <code>useDialog</code> hook and HTML Popover API.</p>
                     <nav className="right-align">
-                        <Button variant="transparent" onClick={() => ui("#dialog")}>Close</Button>
+                        <Button variant="transparent" onClick={closeDialog}>Close</Button>
                     </nav>
                 </div>
             )
@@ -62,9 +62,9 @@ export default function DialogsDemo() {
                     <h5>Confirm Action</h5>
                     <p>Are you sure you want to delete this project? This action cannot be undone.</p>
                     <nav className="right-align">
-                        <Button variant="transparent" onClick={() => ui("#dialog")}>Cancel</Button>
+                        <Button variant="transparent" onClick={closeDialog}>Cancel</Button>
                         <Button variant="primary" onClick={() => {
-                            ui("#dialog");
+                            closeDialog();
                             addToast({ text: "Project deleted", icon: "delete" });
                         }}>Delete</Button>
                     </nav>
@@ -79,9 +79,9 @@ export default function DialogsDemo() {
             content: (
                 <div className="padding">
                     <h5>Bottom Sheet Dialog</h5>
-                    <p>Positioned at the bottom of the screen.</p>
+                    <p>Positioned at the bottom of the screen using HTML Popover API.</p>
                     <nav className="right-align">
-                        <Button onClick={() => ui("#dialog")}>Done</Button>
+                        <Button onClick={closeDialog}>Done</Button>
                     </nav>
                 </div>
             )

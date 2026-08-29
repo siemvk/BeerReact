@@ -20,7 +20,7 @@ export { menuHelper, type menuHelperProps, type menuItem, divider } from "./help
 
 // providers
 export { default as BeerProviders } from "./providers/beerProviders";
-export { DialogContext, DialogProvider, useDialog } from "./providers/dialog"
+export { DialogContext, DialogProvider, useDialog, type DialogData, type DialogContextType } from "./providers/dialog"
 export { ToastProvider, ToastContext, useToast } from "./providers/toast"
 
 // others

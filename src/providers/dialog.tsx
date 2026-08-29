@@ -1,36 +1,68 @@
-import { createContext, useContext, type ReactNode, useState } from "react";
-
+import { createContext, useContext, useRef, useState, type ReactNode } from "react";
 import React from 'react';
-import TextAndIcon from "../helpers/textAndIcon";
 import { pos } from "../types";
-import { Button } from "../Button/Button";
-
 
 export interface DialogData {
-    content: any,
-    pos?: pos
+    content: ReactNode;
+    pos?: pos;
+    className?: string;
+    popover?: "" | "auto" | "manual";
 }
 
-export const DialogContext = createContext<{ pushDialog: (toast: Omit<DialogData, 'id'>) => void }>({
+export interface DialogContextType {
+    pushDialog: (dialog: DialogData) => void;
+    closeDialog: () => void;
+}
+
+export const DialogContext = createContext<DialogContextType>({
     pushDialog: () => { },
+    closeDialog: () => { },
 });
 
 export const useDialog = () => useContext(DialogContext);
 
 export const DialogProvider = ({ children }: { children: ReactNode }) => {
+    const dialogRef = useRef<HTMLDialogElement>(null);
     const [dialog, setDialog] = useState<DialogData>({
-        content: <><h1>Error!</h1><p>The dialog has not been set. please report this to the beer css react</p></>
+        content: null,
     });
 
-    const pushDialog = (dialog: DialogData) => {
-        setDialog(dialog);
-        ui("#dialog")
+    const closeDialog = () => {
+        try {
+            if (dialogRef.current && typeof dialogRef.current.hidePopover === "function") {
+                dialogRef.current.hidePopover();
+            }
+        } catch {
+            // In case popover is already hidden or not supported
+        }
     };
 
+    const pushDialog = (dialogData: DialogData) => {
+        setDialog(dialogData);
+        requestAnimationFrame(() => {
+            try {
+                if (dialogRef.current && typeof dialogRef.current.showPopover === "function") {
+                    if (!dialogRef.current.matches?.(":popover-open")) {
+                        dialogRef.current.showPopover();
+                    }
+                }
+            } catch {
+                // In case popover is already open or not supported
+            }
+        });
+    };
+
+    const classNamesList = [dialog.pos, dialog.className].filter(Boolean).join(" ");
+
     return (
-        <DialogContext.Provider value={{ pushDialog: pushDialog }}>
+        <DialogContext.Provider value={{ pushDialog, closeDialog }}>
             {children}
-            <dialog id="dialog" className={`${dialog.pos} `} data-ui="#dialog">
+            <dialog
+                ref={dialogRef}
+                id="dialog"
+                popover={dialog.popover ?? "auto"}
+                className={classNamesList || undefined}
+            >
                 {dialog.content}
             </dialog>
         </DialogContext.Provider>

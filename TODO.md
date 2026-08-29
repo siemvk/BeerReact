@@ -38,4 +38,4 @@ components:
 - [x] Tooltip
 
 overige todo's voor 3.0.0:
-- [] fix dialogs!!
+- [x] fix dialogs!!
