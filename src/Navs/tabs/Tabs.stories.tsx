@@ -1,10 +1,11 @@
+
 import type { Meta, StoryObj } from "@storybook/react";
 import React from "react";
-import { NavTabs } from "./NavTabs";
+import { Tabs } from "./Tabs";
 
-const meta: Meta<typeof NavTabs> = {
-    title: "M3/Nav/NavTabs",
-    component: NavTabs,
+const meta: Meta<typeof Tabs> = {
+    title: "M3/Tabs",
+    component: Tabs,
     tags: ["autodocs"],
     argTypes: {
         selectedId: {
@@ -27,7 +28,7 @@ const meta: Meta<typeof NavTabs> = {
 
 export default meta;
 
-type Story = StoryObj<typeof NavTabs>;
+type Story = StoryObj<typeof Tabs>;
 
 export const Default: Story = {
     args: {

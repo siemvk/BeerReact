@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { NavBar } from "./NavBar";
 
 const meta: Meta<typeof NavBar> = {
-    title: "M3/NavBar",
+    title: "M3/Nav/NavBar",
     component: NavBar,
     tags: ["autodocs"],
     argTypes: {

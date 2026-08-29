@@ -4,7 +4,7 @@ import { NavRail } from "./NavRail";
 import { sb_pos } from "../../types";
 
 const meta: Meta<typeof NavRail> = {
-    title: "M3/NavRail",
+    title: "M3/Nav/NavRail",
     component: NavRail,
     tags: ["autodocs"],
     argTypes: {
