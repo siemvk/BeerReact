@@ -27,6 +27,11 @@ export const classNames = {
             extra: "extra-line"
         }
     },
+    badge: {
+        badge: "badge",
+        mini: "min",
+
+    },
     border: {
         none: "no-border",
         border: "border"

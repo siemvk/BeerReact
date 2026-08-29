@@ -1,7 +1,7 @@
 Nee dit is geen ai, ik heb gwn geen zin om gh issues te maken.
 
 components:
-- [] Badge
+- [x] Badge (via classnames)
 - [x] Button
 - [x] Card
 - [x] Checkbox
@@ -11,7 +11,6 @@ components:
 - [x] Divider
 - [x] Expansion (niet nodig, geen extra styling dan de default html details/summary)
 - [x] Fieldsets
-- [] Grid <-- hoe????
 - [x] Icon
 - [x] Input
 - [] Layout
@@ -37,3 +36,6 @@ components:
 - [] Tabs
 - [] Textarea
 - [x] Tooltip
+
+overige todo's voor 3.0.0:
+- [] fix dialogs!!
