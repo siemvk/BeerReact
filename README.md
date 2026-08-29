@@ -1,6 +1,6 @@
 # BeerReact
 
-Make website with beutiful Material UI 3 components with ease in react.
+Make websites with beutiful Material UI 3 components with ease in react.
 
 ## Why?
 
