@@ -18,6 +18,8 @@ export interface NavRailProps extends HTMLAttributes<HTMLElement> {
     initialSelected?: string;
     autoUpdateSelected?: boolean;
     dontHideOnMobile?: boolean;
+    center?: boolean;
+    classNames?: string[];
 }
 
 export interface NavProps extends NavRailProps { }
@@ -34,6 +36,8 @@ export const NavRail = ({
     dontHideOnMobile = false,
     items = [],
     className = "",
+    classNames = [],
+    center = false,
     ...props
 }: NavRailProps) => {
     const [menuOpen, setMenuOpen] = useState(InitialMenuOpen);
@@ -58,11 +62,21 @@ export const NavRail = ({
         pos,
         "scroll",
         menuOpen ? "max" : "",
-        className
+        className,
+        center ? "center-align" : "",
+        [...classNames]
     ].filter(Boolean).join(" ");
+
+    const itemClasses = [
+        // gang idk waarom dit hier is
+    ].filter(Boolean).join(" ");
+
 
     return (
         <nav className={navClasses} {...props}>
+
+            {children}
+
             <header>
                 {allowSizeChange && (
                     <button
@@ -89,7 +103,7 @@ export const NavRail = ({
                     <a
                         key={v.id}
                         onClick={() => handleItemClick(v)}
-                        className={isActive ? "active" : ""}
+                        className={isActive ? "active " + itemClasses : itemClasses}
                     >
                         <i>{v.icon}</i>
                         <div>{v.text}</div>

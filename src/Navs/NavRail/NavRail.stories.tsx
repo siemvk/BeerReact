@@ -35,7 +35,14 @@ const meta: Meta<typeof NavRail> = {
         items: {
             description: "Array of navigation items with id, icon, and text",
         },
+        center: {
+            control: "boolean",
+            description: "Center the nav items."
+        },
     },
+    args: {
+        center: false
+    }
 };
 
 export default meta;
@@ -54,6 +61,46 @@ export const Default: Story = {
             icon: "add",
             text: "Nieuw",
         },
+        children: <img src="https://cdn.hackclub.com/01a05816-8d0f-7c64-a740-a07a95220581/20260525_143827.jpg" className="small"></img>,
+        items: [
+            {
+                id: "home",
+                icon: "home",
+                text: "Home",
+            },
+            {
+                id: "search",
+                icon: "search",
+                text: "Zoeken",
+            },
+            {
+                id: "mail",
+                icon: "mail",
+                text: "Berichten",
+            },
+            {
+                id: "settings",
+                icon: "settings",
+                text: "Instellingen",
+            },
+        ],
+    },
+};
+
+
+export const Centered: Story = {
+    args: {
+        pos: "left",
+        InitialMenuOpen: true,
+        allowSizeChange: false,
+        initialSelected: "home",
+        autoUpdateSelected: true,
+        // bigButton: {
+        //     id: "new_item",
+        //     icon: "add",
+        //     text: "Nieuw",
+        // },
+        // children: <img src="https://cdn.hackclub.com/01a05816-8d0f-7c64-a740-a07a95220581/20260525_143827.jpg" className="small"></img>,
         items: [
             {
                 id: "home",

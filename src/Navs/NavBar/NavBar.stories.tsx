@@ -34,7 +34,14 @@ const meta: Meta<typeof NavBar> = {
         items: {
             description: "Array of navigation items with id, icon, and text",
         },
+        spread: {
+            control: "boolean",
+            description: "Add the max size between items.",
+        }
     },
+    args: {
+        spread: false
+    }
 };
 
 export default meta;

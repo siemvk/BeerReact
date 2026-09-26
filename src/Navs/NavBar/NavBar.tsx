@@ -16,6 +16,8 @@ export interface NavBarProps extends HTMLAttributes<HTMLElement> {
     initialSelected?: string;
     autoUpdateSelected?: boolean;
     dontHideOnBigScreen?: boolean;
+    spread?: boolean;
+    classNames?: string[];
 }
 
 export const NavBar = ({
@@ -28,6 +30,8 @@ export const NavBar = ({
     dontHideOnBigScreen: dontHideOnBottomBigScreen,
     items = [],
     className = "",
+    spread = false,
+    classNames = [],
     ...props
 }: NavBarProps) => {
     const [internalSelected, setInternalSelected] = useState<string>(
@@ -44,13 +48,17 @@ export const NavBar = ({
             item.onClick(item);
         }
     };
+    const itemClasses = [
+        spread ? "max" : ""
+    ].filter(Boolean).join(" ");
 
     const navClasses = [
         !dontHideOnBottomBigScreen ? "s" : "",
         pos,
         "scroll",
         // "max",
-        className
+        className,
+        [...classNames]
     ].filter(Boolean).join(" ");
 
     return (
@@ -72,7 +80,7 @@ export const NavBar = ({
                     <a
                         key={v.id}
                         onClick={() => handleItemClick(v)}
-                        className={isActive ? "active" : ""}
+                        className={isActive ? "active " + itemClasses : itemClasses}
                     >
                         <i>{v.icon}</i>
                         <div>{v.text}</div>
