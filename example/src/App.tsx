@@ -6,6 +6,8 @@ import FormsDemo from "./pages/FormsDemo";
 import CardsListsDemo from "./pages/CardsListsDemo";
 import AutoNavRail from "../../src/helpers/smartNavRail";
 import { NavBar, navItem } from "../../src";
+import Resources from "./pages/MyDemo";
+import About from "./pages/about";
 
 export default function App() {
     const navigate = useNavigate();
@@ -26,6 +28,18 @@ export default function App() {
     };
 
     const mainOptions: navItem[] = [
+        {
+            id: "about",
+            icon: "info",
+            text: "About",
+            onClick: handleNavigate,
+        },
+        {
+            id: "my-demo",
+            icon: "file_copy",
+            text: "Resources",
+            onClick: handleNavigate,
+        },
         {
             id: "btns",
             icon: "widgets",
@@ -56,6 +70,7 @@ export default function App() {
             text: "Cards & Lists",
             onClick: handleNavigate,
         },
+
     ];
 
     return (
@@ -71,12 +86,16 @@ export default function App() {
         >
             <main className="responsive">
                 <Routes>
-                    <Route path="/" element={<Navigate to="/btns" replace />} />
+                    <Route path="/" element={<Navigate to="/about" replace />} />
                     <Route path="/btns" element={<ButtonBuilder />} />
+                    <Route path="/about" element={<About />} />
+
                     <Route path="/dialogs" element={<DialogsDemo />} />
                     <Route path="/split-buttons" element={<SplitButtonsDemo />} />
                     <Route path="/forms" element={<FormsDemo />} />
                     <Route path="/cards-lists" element={<CardsListsDemo />} />
+                    <Route path="/my-demo" element={<Resources />} />
+
                     <Route
                         path="*"
                         element={
