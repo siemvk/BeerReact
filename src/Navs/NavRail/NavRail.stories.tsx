@@ -95,6 +95,7 @@ export const Centered: Story = {
         allowSizeChange: false,
         initialSelected: "home",
         autoUpdateSelected: true,
+
         // bigButton: {
         //     id: "new_item",
         //     icon: "add",
@@ -123,5 +124,7 @@ export const Centered: Story = {
                 text: "Instellingen",
             },
         ],
+
+        center: true
     },
 };
