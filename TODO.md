@@ -29,7 +29,7 @@ components:
 - [] Shape
 - [x] Slider
 - [x] Snackbar (als toast)
-- [] Steppers
+- [x] Steppers
 - [x] Switch
 - [-] Table (imo niet nodig, kan via classnames)
 - [x] Tabs

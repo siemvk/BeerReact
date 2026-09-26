@@ -13,11 +13,6 @@ export const classNames = {
             medium: "medium-text",
             large: "large-text",
         },
-        size: {
-            small: "small",
-            medium: "medium",
-            large: "large",
-        },
         spacing: {
             none: "no-line",
             tiny: "tiny-line",
@@ -30,7 +25,6 @@ export const classNames = {
     badge: {
         badge: "badge",
         mini: "min",
-
     },
     border: {
         none: "no-border",
@@ -52,6 +46,13 @@ export const classNames = {
         right: "right-round",
         top: "top-round",
         bottom: "bottom-round"
+    },
+    sizes: {
+        tiny: "tiny",
+        small: "small",
+        medium: "medium",
+        large: "large",
+        extra: "extra"
     },
     colors: {
         fill: "fill",
