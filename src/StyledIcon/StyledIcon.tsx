@@ -2,7 +2,7 @@ import React, { type HTMLAttributes } from "react";
 import { Flex } from "../Navs/Flex/Flex"
 import { classNames } from "../classNames";
 
-export interface IconCardProps extends HTMLAttributes<HTMLElement> {
+export interface StyledIconProps extends HTMLAttributes<HTMLElement> {
     icon: string;
     fill?: boolean;
     shape?: "square" | "round" | "square round";
@@ -14,7 +14,7 @@ export function StyledIcon({
     fill = true,
     shape = "square",
     ...props
-}: IconCardProps) {
+}: StyledIconProps) {
     const classNamesNav = [
         "center-align",
         "primary-container",

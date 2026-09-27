@@ -30,6 +30,7 @@ export { Card, type CardProps } from "./card/card"
 export { IconCard, type IconCardProps } from "./IconCard/IconCard"
 export { Progress, type ProgressProps } from "./Progress/Progress"
 export { List, type ListProps } from "./List/List"
+export { StyledIcon, type StyledIconProps } from "./StyledIcon/StyledIcon"
 
 // Navs
 export { NavTabs, type NavTabsProps } from "./Navs/NavTabs/NavTabs"
@@ -47,5 +48,3 @@ export { classNames } from "./classNames"
 // html elements
 export const Code = (props: React.ComponentPropsWithoutRef<"code">) => React.createElement("code", props);
 export const Blockquote = (props: React.ComponentPropsWithoutRef<"blockquote">) => React.createElement("blockquote", props);
-
-
