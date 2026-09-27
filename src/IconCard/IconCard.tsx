@@ -1,11 +1,18 @@
 import React, { type HTMLAttributes } from "react";
 import { Flex } from "../Navs/Flex/Flex"
 
+
+/**
+ * @deprecated Just make your own with a Card, a nav and a `StyledIcon` component.
+ */
 export interface IconCardProps extends HTMLAttributes<HTMLElement> {
     icon: string;
     text: string;
 }
 
+/**
+ * @deprecated Just make your own with a Card, a nav and a `StyledIcon` component.
+ */
 export function IconCard({
     icon,
     text,
