@@ -70,14 +70,12 @@ export default function SplitButtonsDemo() {
                         >
                             Left Tooltip
                         </Button>
-                        <div>
-                            <Button
-                                icon="arrow_forward"
-                            >
-                                Right Tooltip
-                            </Button>
-                            <Tooltip pos="top">Tooltip on Right</Tooltip>
-                        </div>
+                        <Button
+                            icon="arrow_forward"
+                            buttonTooltip={<Tooltip pos="right">Tooltip on Right</Tooltip>}
+                        >
+                            Right Tooltip
+                        </Button>
                     </div>
                 </Card>
             </div>

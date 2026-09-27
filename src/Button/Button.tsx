@@ -64,8 +64,8 @@ export const Button = ({
   } else {
     return (
       <button className={`${size} ${formsString} ${ripple} ${extraArgs} ${shape} ${rounding} ${variant}`} {...props}>
+        {buttonTooltip}
         <TextAndIcon icon={icon}>{children}
-          {buttonTooltip}
         </TextAndIcon>
       </button >
     );
