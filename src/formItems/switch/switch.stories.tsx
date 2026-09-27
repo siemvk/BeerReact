@@ -13,6 +13,9 @@ const meta: Meta = {
             description: "De icon (optioneel)"
         }
     },
+    args: {
+        icon: undefined,
+    },
 };
 
 export default meta;
@@ -20,6 +23,6 @@ type Story = StoryObj;
 
 export const Filled: Story = {
     args: {
-        children: "checkbox",
-    },
+        icon: ""
+    }
 };

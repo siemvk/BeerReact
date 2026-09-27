@@ -9,7 +9,7 @@ export interface SwitchProps extends Omit<React.InputHTMLAttributes<HTMLInputEle
 
 
 export const Switch = ({
-    icon,
+    icon = undefined,
     children,
     ...props
 }: SwitchProps) => {
